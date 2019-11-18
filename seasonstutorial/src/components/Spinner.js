@@ -10,7 +10,7 @@ const Spinner = (props) => {
     )
 };
 
-
+// way to set default props for components
 Spinner.defaultProps = {
     message: 'Loading...'
 };

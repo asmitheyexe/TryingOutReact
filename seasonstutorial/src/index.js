@@ -78,8 +78,8 @@ class App extends React.Component{
 
     // needed for every react component
     // render() is a life cycle method
-    
-    render(){
+    // helper functions
+    renderContent(){
         if(this.state.lat && !this.state.errMsg){
             // Display the SeasonDisplay Component if we get latitude 
             return(
@@ -101,6 +101,14 @@ class App extends React.Component{
                 <Spinner message="Please give me your location" />
             );
         }
+    }
+    // Try to only have 1 return statement in the render method
+    render(){
+        return(
+            <div className="border red">
+                {this.renderContent()}
+            </div>
+        )
     }
 }
 
