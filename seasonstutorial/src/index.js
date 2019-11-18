@@ -7,6 +7,25 @@ import Spinner from './components/Spinner';
  * props != state
  * 
  */
+// This is a Class component not a functional one
+// class components have the component lifecycle
+/**
+ * Functional components are great for simple UI components
+ * They return a set of HTML based on some given props 
+ * 
+ * Classes have acces too the following lifecyce functions
+ * LifeCycle in order of execution
+ * constructor
+ *      executes first
+ * render
+ *      Renders the wanted JSX
+ * componentDidMount
+ *      Runs after the component is rendered
+ * componentDidUpdate
+ *      Runs every time the component state changes
+ * componenWillUnmount 
+ *      Runs when the component leaves the page
+ */
 class App extends React.Component{
     // how to init a state for a react component easy.
     /*constructor(props){
@@ -56,17 +75,10 @@ class App extends React.Component{
         console.log('Component unmounting');
     }*/
 
-    
+
     // needed for every react component
     // render() is a life cycle method
-    /**
-     * LifeCycle in order of execution
-     * constructor
-     * render
-     * componentDidMount
-     * componentDidUpdate
-     * componenWillUnmount
-     */
+    
     render(){
         if(this.state.lat && !this.state.errMsg){
             // Display the SeasonDisplay Component if we get latitude 
