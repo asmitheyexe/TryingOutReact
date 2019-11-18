@@ -12,11 +12,11 @@ const getSeason = (lat, month) => {
 // Nice JSON variable to determine properties fast
 const seasonConfig = {
     summer : {
-        text : 'Lets die from heat',
+        text : 'Let\'s die from the heat',
         icon : 'sun'
     },
     winter : {
-        text : 'Lets die from cold',
+        text : 'Let\'s die from the cold',
         icon : 'snowflake'
     }
 };
