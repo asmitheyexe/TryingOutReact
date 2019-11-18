@@ -1,7 +1,7 @@
 import './SeasonDisplay.css';
 import React from 'react';
 
-
+// Calculate what season it is (summer or winter based on latitude)
 const getSeason = (lat, month) => {
     if (month > 2 && month < 9){
         return lat > 0 ? 'sumer': 'winter';
@@ -9,7 +9,7 @@ const getSeason = (lat, month) => {
         return lat > 0 ? 'winter': 'summer';
     }
 }
-
+// Nice JSON variable to determine properties fast
 const seasonConfig = {
     summer : {
         text : 'Lets die from heat',
@@ -23,8 +23,8 @@ const seasonConfig = {
 
 const SeasonDisplay = props => {
     const season = getSeason(props.latitude, new Date().getMonth());
-    console.log(season);
-    const {text, icon} = seasonConfig[season]; // {text ,icon}
+    
+    const {text, icon} = seasonConfig[season]; // {text ,icon} cool es6 feature i think
     return (
         // on outter wrapper for div try to name root class to the component name
         <div className={`season-display ${season}`}>
@@ -34,5 +34,5 @@ const SeasonDisplay = props => {
         </div>
         )
 };
-
+// To be able to use React Components we must export them at the end of the file and import them in the file we want to use them in
 export default SeasonDisplay;

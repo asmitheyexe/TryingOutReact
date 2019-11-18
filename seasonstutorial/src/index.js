@@ -15,11 +15,15 @@ class App extends React.Component{
 
 
     // }
+
     // does the same thing as defining a constructor
     // babel will translate this expression into ES5 
     state = {lat:null, errMsg: ''};
     
     componentDidMount(){
+        // runs when component is added to the screen
+        // best to intialized data in here
+        // render() always gets re ran
         console.log('Component rendered to screen');
         window.navigator.geolocation.getCurrentPosition(
             (position) => {
@@ -42,15 +46,19 @@ class App extends React.Component{
     }
     /*
     componentDidUpdate(){
+        // runs every time component is updated.
         console.log('component updated');
     }
 
     componentWillUnmount(){
+        runs when component is removed
+        good to clean up data here
         console.log('Component unmounting');
     }*/
     // needed for every react component
     // render() is a life cycle method
     /**
+     * LifeCycle in order of execution
      * constructor
      * render
      * componentDidMount

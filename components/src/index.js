@@ -6,7 +6,7 @@ import ApprovalCard from './components.js/ApprovalCard';
 function getTime(){
     return new Date().toLocaleTimeString();
 }
-
+// Example using embedded components inside other components
 const App = () => {
     return (
         <div className="ui container comments">

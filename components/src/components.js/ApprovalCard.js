@@ -1,7 +1,7 @@
 import React from 'react';
-
+// Wrapper component that displays 2 buttons below and input component
 const ApprovalCard = props =>{
-
+    // Demos how to take a prop object and display it in another component
     return (
         <div className ="ui card">
             <div className="content">

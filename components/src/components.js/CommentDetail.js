@@ -1,5 +1,6 @@
 import React from 'react';
-
+// functional component that represents a Comment component
+// Simple
 const CommentDetail = props => {
     return (
      <div className="comment">

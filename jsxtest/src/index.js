@@ -4,17 +4,18 @@ import React from 'react';
 
 
 
-// create React Component
+// create functional React Component
 const App = () => {
-    const buttonText = 'meme';
+    const buttonText = 'button textttt';
     const style = {
         backgroundColor:'red', 
         color:'blue'
     };
+    // JSX is like writing HTML but able to use JS expressions
     return (
         <div>
             <div>hi there</div>
-            <input id="input" type="text" />
+            <input id="input" type="text" /> 
             <button stlye={style} >{buttonText} </button>
         </div>
      );
