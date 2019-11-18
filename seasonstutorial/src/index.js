@@ -9,12 +9,12 @@ import Spinner from './components/Spinner';
  */
 class App extends React.Component{
     // how to init a state for a react component easy.
-    // constructor(props){
-    //     super(props);
-    //     this.state = { lat: null, errMsg : ''}; // set state stuff here
+    /*constructor(props){
+        super(props);
+        this.state = { lat: null, errMsg : ''}; // set state stuff here
 
 
-    // }
+    }*/
 
     // does the same thing as defining a constructor
     // babel will translate this expression into ES5 
@@ -55,6 +55,8 @@ class App extends React.Component{
         good to clean up data here
         console.log('Component unmounting');
     }*/
+
+    
     // needed for every react component
     // render() is a life cycle method
     /**
@@ -67,23 +69,30 @@ class App extends React.Component{
      */
     render(){
         if(this.state.lat && !this.state.errMsg){
+            // Display the SeasonDisplay Component if we get latitude 
             return(
                 <SeasonDisplay latitude={this.state.lat} />
-            )
+            );
         }else if(!this.state.lat && this.state.errMsg){
+            // If the lat is undefined and we have a error message
             return(
                 <div>
                     Error: {this.state.errMsg}
                 </div>
-            )
+            );
         }else {
+            // This demos how our Spinner component has defaultProps
+            // You can not enter anything for the message prop,
+            // or you can add your own message.
             return (
-                <Spinner />
-            )
+              
+                <Spinner message="Please give me your location" />
+            );
         }
     }
 }
 
+// Render our App component to the #root tag in index.html
 ReactDOM.render(
     <App />,
     document.querySelector('#root')
