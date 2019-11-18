@@ -13,7 +13,7 @@ class SearchBar extends React.Component{
     }
 
     /**
-     * With parenthesis = happes every render
+     * With parenthesis = happens every render
      * without = callback on event only
      * 
      * alternet syntax can be inline {(e) => console.log(e.target.value)}
