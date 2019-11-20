@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {selectSong} from '../../actions' // named export
 
 class SongList extends Component{
     renderList(){
@@ -7,7 +8,11 @@ class SongList extends Component{
             return(
                 <div className="item" key={song.title}>
                     <div className="right floated content">
-                        <button className="ui button primary">Select</button>
+                        <button  
+                            className="ui button primary"
+                            onClick={() => this.props.selectSong(song)}>
+                            Select
+                        </button>
                     </div>
                     <div className="content" >
                         {song.title}
@@ -28,10 +33,9 @@ class SongList extends Component{
 
 // process state data to send to components as props
 // state should be the redux store in provider
-const mapStateToProps = (state) => {
-    
+const mapStateToProps = state => {
     return { songs: state.songs};
-}
+};
 
 // what is that syntax lol
 /**
@@ -47,5 +51,5 @@ const mapStateToProps = (state) => {
  * first args = mapping function
  * 2nd args = component
  */
-export default connect(mapStateToProps)(SongList);
+export default connect(mapStateToProps ,{ selectSong})(SongList);
 
