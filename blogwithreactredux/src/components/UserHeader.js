@@ -1,15 +1,7 @@
 import React from 'react';
-import {fetchUser} from '../actions';
 import {connect} from 'react-redux';
 
 class UserHeader extends React.Component{
-    componentDidMount(){
-        this.props.fetchUser(this.props.userId);
-        
-    }
-
-
-
     render(){
         // .find is a JS built in function
         const {user} = this.props;
@@ -28,7 +20,7 @@ class UserHeader extends React.Component{
 function mapStateToProps(state, ownProps){
     return { user: state.users.find(user => user.id === ownProps.userId)}
 }
-export default connect(mapStateToProps, {fetchUser})(UserHeader);
+export default connect(mapStateToProps)(UserHeader);
 
 /*
 This is considered not a good approach. This component is recieving way more
