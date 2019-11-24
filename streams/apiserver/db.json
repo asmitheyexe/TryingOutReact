@@ -1,0 +1,14 @@
+{
+  "streams": [
+    {
+      "title": "asd",
+      "description": "ad",
+      "id": 1
+    },
+    {
+      "title": "MemeStream",
+      "description": "Go team go",
+      "id": 2
+    }
+  ]
+}
