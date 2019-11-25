@@ -1,14 +1,11 @@
 {
   "streams": [
+   
     {
-      "title": "asd",
-      "description": "ad",
-      "id": 1
-    },
-    {
-      "title": "MemeStream",
-      "description": "Go team go",
-      "id": 2
+      "title": "Test record",
+      "description": "Record of tests",
+      "userId": "106076303412363777348",
+      "id": 9
     }
   ]
 }
