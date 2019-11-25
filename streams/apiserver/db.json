@@ -1,11 +1,16 @@
 {
   "streams": [
-   
     {
-      "title": "Test record",
-      "description": "Record of tests",
+      "title": "Not My Stream",
+      "description": "Not your stream",
+      "userId": "1060763303412363777348",
+      "id": 11
+    },
+    {
+      "title": "My Cool Stream",
+      "description": "Check out my SICK stream yo",
       "userId": "106076303412363777348",
-      "id": 9
+      "id": 12
     }
   ]
 }

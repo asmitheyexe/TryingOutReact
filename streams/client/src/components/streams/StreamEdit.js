@@ -6,11 +6,10 @@ import _ from 'lodash';
 
 class StreamEdit extends React.Component{
     componentDidMount(){
-        this.props.fetchStream(this.props.match.params.id)
+        this.props.fetchStream(this.props.match.params.id);
     }
 
     onSubmit = (formValues,id) =>{
-        console.log(formValues);
         this.props.editStream(this.props.match.params.id,formValues);
     }
 
